@@ -29,6 +29,5 @@ source(file.path(sourcecode.path, "GPDR_sourcecode", "GPDR_functions.R"))    # s
 ## What Are The Source Codes For?
 
 In the `GPDR_sourcecode` folder,
-* `GPDR_Matern.R` contains functions to fit GPDR and output estimates from it
+* `GPDR_Matern.R` contains functions to fit GPDR and output its estimates
 * `GPDR_functions.R` sources required libraries and `GPDR_Matern.R`. It also contains functions for setting the true regression function `beta1()` in simulations, providing Kernel Density estimates (KDE), drawing random samples from Dirichlet process (DP), generating data for simulation where independent covariates are simulated from DP and independent and dependent covariates are drawn from a continuous model.
-
