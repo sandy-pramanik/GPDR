@@ -22,7 +22,7 @@ install.packages(c("LaplacesDemon", "ar.matrix", "tidyverse", "doParallel"))
 Specify path to the `GPDR_sourcecode` folder available from this `GitHub` repository. The functions can then be sourced as
 
 ``` r
-# sourcecode.path = ...    # path ".../GPDR_sourcecode" to the GPDR_sourcecode folder
+sourcecode.path = ...    # specifies path ".../GPDR_sourcecode" to the GPDR_sourcecode folder
 source(file.path(sourcecode.path, "GPDR_sourcecode", "GPDR_functions.R"))    # sources ".../GPDR_sourcecode/GPDR_functions.R"
 ```
 
