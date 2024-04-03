@@ -1,5 +1,5 @@
 # GPDR
-Codes to implement Gaussian Process distribution regression (GPDR) as proposed in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) and reproduce figures/results therein.
+Codes to implement Gaussian Process distribution regression (GPDR) as proposed in [Tang and Pramanik et al. 2023+](https://arxiv.org/abs/2303.06434) and reproduce figures/results therein. 
 
 ## Required Package Installation
 
@@ -22,9 +22,9 @@ In the `GPDR_sourcecode` folder,
  * `GPDR_functions.R` sources required libraries and `GPDR_Matern.R`. It also contains
    * `GPfit()` for fitting GPDR,
    * `rdp()` for drawing random samples from the Dirichlet process (DP),
-   * `generate_data_dp()` for simulating data as in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) where independent covariates are distributed according to DP,
-   * `generate_data_cp_indep()` to simulate data as in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) for independently distributed continuous covariates,
-   * `generate_data_cp_dep()` for simulating data as in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) where continuous covariates within each subject are dependent,
+   * `generate_data_dp()` for simulating data as in [Tang and Pramanik et al. 2023+](https://arxiv.org/abs/2303.06434) where independent covariates are distributed according to DP,
+   * `generate_data_cp_indep()` to simulate data as in [Tang and Pramanik et al. 2023+](https://arxiv.org/abs/2303.06434) for independently distributed continuous covariates,
+   * `generate_data_cp_dep()` for simulating data as in [Tang and Pramanik et al. 2023+](https://arxiv.org/abs/2303.06434) where continuous covariates within each subject are dependent,
    * `beta1()` to set the true regression function in simulations, and
    * `kde_fit()` to provide Kernel Density estimates (KDE).
 
