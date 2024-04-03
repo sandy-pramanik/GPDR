@@ -1,5 +1,12 @@
 # GPDR
+
+## Description
+
 Codes to implement Gaussian Process distribution regression (GPDR) as proposed in [Tang and Pramanik et al. 2023+](https://arxiv.org/abs/2303.06434) and reproduce figures/results therein. 
+
+## Credit
+
+Sandipan Pramanik, Bohao Tang, and Abhirup Datta developed this repository and wrote the codes included here.
 
 ## Required Package Installation
 
@@ -14,7 +21,7 @@ sourcecode.path = ...    # specifies path ".../GPDR_sourcecode" to the GPDR_sour
 source(file.path(sourcecode.path, "GPDR_sourcecode", "GPDR_functions.R"))    # sources ".../GPDR_sourcecode/GPDR_functions.R"
 ```
 
-## What Are The Source Codes For?
+## Key Functions
 
 In the `GPDR_sourcecode` folder,
  
