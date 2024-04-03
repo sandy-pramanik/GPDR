@@ -20,31 +20,24 @@ In the `GPDR_sourcecode` folder,
  
  * `GPDR_Matern.R` contains functions to fit GPDR and output its estimates
  * `GPDR_functions.R` sources required libraries and `GPDR_Matern.R`. It also contains
-   * `GPfit()` fits GPDR,
+   * `GPfit()` for fitting GPDR,
    * `rdp()` for drawing random samples from the Dirichlet process (DP),
-   * `generate_data_dp()` for simulating data where independent covariates are distributed according to DP,
-   * `generate_data_cp_indep()` for simulating data where independently distributed continuous covariates,
-   * `generate_data_cp_dep()` for simulating data where continuous covariates are dependent within each subject,
+   * `generate_data_dp()` for simulating data as in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) where independent covariates are distributed according to DP,
+   * `generate_data_cp_indep()` to simulate data as in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) for independently distributed continuous covariates,
+   * `generate_data_cp_dep()` for simulating data as in [Tang et al. 2023+](https://arxiv.org/abs/2303.06434) where continuous covariates within each subject are dependent,
    * `beta1()` to set the true regression function in simulations, and
    * `kde_fit()` to provide Kernel Density estimates (KDE).
 
 ## Reproducing Simulation Results
 
 * Figures 1, 4, and 6 use empirical posterior risks of GPDR, KDE, and BDR from simulations.
-
-  * Run `SimulationDP_0.1.R` and `SimulationDP_25.R` for simulation results of GPDR and KDE for independent DP-distributed covariates with concentration parameters 0.1 and 25. Change `alpha_DP` there to get performances for other concentration parameter values.
-  * Run `BDR_Simulation.R` for simulation results of BDR ([Law et al. 2018](https://proceedings.mlr.press/v84/law18a/law18a.pdf)) for independent DP-distributed covariates with concentration parameters 25. Change `alpha` in `generate_data_dp` function in the file to get performances for other concentration parameter values.
-  * Run `SimulationCP_indep.R` and `SimulationCP_dep_rho0.8.R` for simulation results under independent and dependent continuous covariates with AR(1) coefficient 0.8 in the latter. Change `rhoX` in `SimulationCP_dep_rho0.8.R` to get performances for other values of the AR(1) coefficient.
-
+  * Run `SimulationDP.R` for simulation results of GPDR and KDE for independent DP-distributed covariates. Change `alpha_DP` on line 12 there to set the concentration parameter value.
+  * Run `BDR_Simulation.R` for simulation results of BDR ([Law et al. 2018](https://proceedings.mlr.press/v84/law18a/law18a.pdf)) for independent DP-distributed covariates with concentration parameters 25. Change `alpha` in `generate_data_dp()` on line 142 to set the concentration parameter value.
+  * Run `SimulationCP_indep.R` and `SimulationCP_dep.R` for simulation results under independent and dependent continuous covariates. Change `rhoX` on line 13 in `SimulationCP_dep.R` to control the degree of dependence.
 * The empirical CDFs in Figure 2 are obtained by drawing random samples from DP using `rdp()`
-
-  `plot_simulation.R` loads the simulation outputs and creates all the figures mentioned above.
-
-* `MWE_DP.R` and `MWE_CP_dep.R` have minimal working examples (MWEs) under independent DP-distributed covariates and dependent continuous covariates. Figures 3 and 5 are generated within these files. `MWE_CP_indep.R` has MWE under independent continuous covariates. It generates a similar figure and is omitted in the manuscript.
-
+* `plot_simulation.R` loads the simulation outputs and creates all the Figures 1, 2, 4, and 6.
+* `MWE_DP.R`, `MWE_CP_indep.R`, and `MWE_CP_dep.R` have minimal working examples (MWEs) under independent DP-distributed, and independent and dependent continuous covariates. Figures like 3 and 5 are generated within these files.
 * Figures 7 and 8 compare linear and non-linear GPDR when the true data generative model is linear and non-linear.
-
-  * `gp_dist_reg_nonlin_linear_data.R` considers the case where the true data generative model is linear, whereas
-  * the true data generative model is non-linear in `gp_dist_reg_nonlin.R`.
-  
+  * `gp_dist_reg_nonlin_linear_data.R` considers the case where the true data generative model is linear
+  * the true data generative model is non-linear in `gp_dist_reg_nonlin.R`
   The files also generate the figures within.
