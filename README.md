@@ -2,7 +2,7 @@
 
 ## Description
 
-Codes to implement Gaussian Process distribution regression (GPDR) as proposed in [Tang and Pramanik et al. 2023+](https://arxiv.org/abs/2303.06434) and reproduce figures/results therein. 
+Codes to implement Gaussian Process distribution regression (GPDR) as proposed in [Tang and Pramanik et al. (2023+)](https://arxiv.org/abs/2303.06434) and reproduce figures/results therein. 
 
 ## Credit
 
